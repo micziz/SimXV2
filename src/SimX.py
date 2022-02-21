@@ -90,9 +90,9 @@ def bank():
 def home():
     os.system(clear)
     place = "home"
-    tips = ["Remember, help can be obtaiend with the help command"]
+    tips = ["Remember, help can be obtained with the help command"]
     while True:
-        selecthome = input(f"\nCurrenly at {place}.")
+        selecthome = input(f"\nCurrently at {place}.")
         if selecthome == "work":
             work()
         elif selecthome == "help":
