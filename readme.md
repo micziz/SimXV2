@@ -11,6 +11,7 @@
     - [MacOS](#macos)
     - [Linux](#linux)
   - [License](#license)
+  - [List of contributors](#list-of-contributors)
 
 ---
 
@@ -22,7 +23,7 @@ SimX, witch stands for SimulationeXtreme (i know, not really extreme but it's my
 
 ## Who is SimX developed by?
 
-By me! And also a lot of contributors.
+By me! And also a lot of contributors. You can chek the list at the end!
 
 ## Oh, can i contribute?
 
@@ -123,3 +124,7 @@ And enjoy!
 ## License
 
 This project is distributed under the MIT License! Learn more ate the License file!
+
+## List of contributors
+
+- micziz
