@@ -1,3 +1,15 @@
+# 0.1.0
+
+## Major new feature:
+
+- Added sell command
+
+## Fix
+
+- Updated buy command and added a cooldown
+- Updated changlog.md to add a thing i forgot
+
+
 # 0.0.3
 
 ## Major new feature:
@@ -8,7 +20,7 @@
 
 - Fixed changelog.md
 - Updated readme.md
-
+- Updated bank command, added a 3 second timeout before going
 
 # 0.0.2
 

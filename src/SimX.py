@@ -1,7 +1,14 @@
+# Import os to use system commands time to sleep and random to randomize
 import os, time, random
+
+# Clear command to clear the shell
 clear = 'clear'
+# Starting value, can be changed
 value = 100
+
+# Tutorial functions
 def tutorial():
+    #Clear the 
     os.system(clear)
     print("Welcome to a short Interactive tutorial for SimX!")
     time.sleep(3)
@@ -103,6 +110,15 @@ def buy():
         subitem2time = item2time * 10
         value = value - subitem2time
     getoutmoney()
+    time.sleep(3)
+    home()
+
+
+def sell():
+    value = subitem1time + value
+    value = subitem2time + value
+    print("Sold everything...")
+
 
 def home():
     os.system(clear)
@@ -118,6 +134,8 @@ def home():
             bank()
         elif selecthome == "buy":
             buy()
+        elif selecthome == "sell":
+            sell()
 start()
 
 
