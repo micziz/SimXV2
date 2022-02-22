@@ -56,6 +56,14 @@ And enjoy!
 
 ### MacOS
 
+(for inpatient peapole, requires brew: 
+
+```
+brew install python@3.10 && git clone https://github.com/micziz/SimX && cd src && python3 main.py
+```
+
+)
+
 Download the latest release of python, at this time 3.10.2, using the pkg that you can download [here](https://www.python.org/downloads/), or brew/MacPorts using this command 
 
 ```brew install python@3.10```

@@ -85,7 +85,24 @@ def bank():
         global value
         print("Value in $:")
         print(value)
+        time.sleep(3)
     home()
+
+def buy():
+    global item1time, item2time
+    items = ["Strawberry", "Cheese", "Vinager", "Chips", "Milk", "Ham", "Turkey"]
+    item1 = random.choice(items)
+    item2 = random.choice(items)
+    item1time = random.randint(1, 5)
+    item2time = random.randint(1, 5)
+    print(f"You bougth {item1} x" + str(item1time) + f" and {item2} x" + str(item2time))
+    def getoutmoney():
+        global subitem1time, subitem2time, value
+        subitem1time = item1time * 10
+        value = value - subitem1time
+        subitem2time = item2time * 10
+        value = value - subitem2time
+    getoutmoney()
 
 def home():
     os.system(clear)
@@ -99,6 +116,8 @@ def home():
             help()
         elif selecthome == "bank":
             bank()
+        elif selecthome == "buy":
+            buy()
 start()
 
 
