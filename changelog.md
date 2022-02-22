@@ -7,7 +7,7 @@
 ## Fix
 
 - Updated buy command and added a cooldown
-- Updated changlog.md to add a thing i forgot
+- Updated changelog.md to add a thing i forgot
 
 
 # 0.0.3
