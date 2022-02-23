@@ -84,15 +84,27 @@ def work():
     home()
 
 def bank():
+    place = "bank"
+    print(f"currently at {place}")
     print("Welcome to bank.")
     print("Here are your options:")
     print("1 = value")
+    print("2 = Donate 5 dollars to charity")
+    print("3 = Wipe")
     selectbank = input()
     if selectbank == "1":
         global value
         print("Value in $:")
         print(value)
         time.sleep(3)
+    elif selectbank == "2":
+        print("Thanks")
+        value = value - 5
+        print(value)
+    elif selectbank == "3":
+        value = value % 2
+        print("Half of your bank was snapped out of existance")
+    time.sleep(2)
     home()
 
 def buy():
@@ -115,6 +127,7 @@ def buy():
 
 
 def sell():
+    global value, subitem1time, subitem2time
     value = subitem1time + value
     value = subitem2time + value
     print("Sold everything...")

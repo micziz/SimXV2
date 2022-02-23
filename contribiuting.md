@@ -1,5 +1,10 @@
 # Contributing
 
+- [Contributing](#contributing)
+  - [Contributing](#contributing-1)
+    - [Don't know what to do?](#dont-know-what-to-do)
+  - [What to do](#what-to-do)
+
 ## Contributing
 
 PR's are greatly apprecieated! You can open a PR if you want to:
@@ -15,7 +20,7 @@ If you want to propose a major refactor, or an adittion that i did not propose, 
 
 Help peapole with issues and comment on PR's.
 
-## What to do.
+## What to do
 
 I do not provide contributing templeates. This is to give the max freedom to the user. But! You must follow a checklist before contributing!
 
