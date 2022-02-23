@@ -2,13 +2,13 @@
 import os, time, random
 
 # Clear command to clear the shell
-clear = 'clear'
+clear = "clear"
 # Starting value, can be changed
 value = 100
 
 # Tutorial functions
 def tutorial():
-    #Clear the 
+    # Clear the
     os.system(clear)
     print("Welcome to a short Interactive tutorial for SimX!")
     time.sleep(3)
@@ -17,20 +17,28 @@ def tutorial():
     print("Let's go!")
     time.sleep(3)
     os.system(clear)
-    print("By deafault you are at home. If you ever find yourself lost, use the home command to go home")
+    print(
+        "By deafault you are at home. If you ever find yourself lost, use the home command to go home"
+    )
     time.sleep(3)
     os.system(clear)
-    print("To get yourself some things you gotta work kid! Use work to open the work menu")
+    print(
+        "To get yourself some things you gotta work kid! Use work to open the work menu"
+    )
     time.sleep(3)
     os.system(clear)
     print("Use the bank command to open the bank menu!")
     time.sleep(3)
     os.system(clear)
-    print("If you ever find yourself stuck, use the help command to re do this interactive tutorial, or to get a list of all commands.")
+    print(
+        "If you ever find yourself stuck, use the help command to re do this interactive tutorial, or to get a list of all commands."
+    )
     time.sleep(3)
     print("This is everything! Sending you home!")
 
     home()
+
+
 def commands():
     commands = {
         "Help: Opens the help section.",
@@ -38,10 +46,11 @@ def commands():
         "Commands: Opens this section, the commands section",
         "Copyright: Tells you copyright",
         "Credits: Credits of the game",
-        "Home: Brings you home", 
+        "Home: Brings you home",
     }
     for command in commands:
         print(command)
+
 
 def start():
     print("Welcome to SimX!")
@@ -57,9 +66,12 @@ def start():
     print("Teleporting you to home!")
     home()
 
+
 def help():
     print("Welcome to the help section!")
-    print("Here you can re do the tutorial using the tutorial command, or get a list of commands using commands")
+    print(
+        "Here you can re do the tutorial using the tutorial command, or get a list of commands using commands"
+    )
     selecthelp = input()
     if selecthelp == "tutorial":
         tutorial()
@@ -82,6 +94,7 @@ def work():
         salary = 100
         value = value + salary
     home()
+
 
 def bank():
     place = "bank"
@@ -107,6 +120,7 @@ def bank():
     time.sleep(2)
     home()
 
+
 def buy():
     global item1time, item2time
     items = ["Strawberry", "Cheese", "Vinager", "Chips", "Milk", "Ham", "Turkey"]
@@ -115,12 +129,14 @@ def buy():
     item1time = random.randint(1, 5)
     item2time = random.randint(1, 5)
     print(f"You bougth {item1} x" + str(item1time) + f" and {item2} x" + str(item2time))
+
     def getoutmoney():
         global subitem1time, subitem2time, value
         subitem1time = item1time * 10
         value = value - subitem1time
         subitem2time = item2time * 10
         value = value - subitem2time
+
     getoutmoney()
     time.sleep(3)
     home()
@@ -149,7 +165,6 @@ def home():
             buy()
         elif selecthome == "sell":
             sell()
+
+
 start()
-
-
-

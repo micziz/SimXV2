@@ -2,6 +2,11 @@
 
 ---
 
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+
+---
+
 - [SimX!](#simx)
   - [What is SimX?](#what-is-simx)
   - [Who is SimX developed by?](#who-is-simx-developed-by)

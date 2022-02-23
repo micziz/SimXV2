@@ -1,17 +1,30 @@
-- [0.1.1](#011)
-  - [New feature:](#new-feature)
+- [0.1.2](#012)
+  - [New feature](#new-feature)
   - [Fix](#fix)
+- [0.1.1](#011)
+  - [New feature:](#new-feature-1)
+  - [Fix](#fix-1)
 - [0.1.0](#010)
   - [Major new feature:](#major-new-feature)
-  - [Fix](#fix-1)
+  - [Fix](#fix-2)
 - [0.0.3](#003)
   - [Major new feature:](#major-new-feature-1)
-  - [Fix](#fix-2)
+  - [Fix](#fix-3)
 - [0.0.2](#002)
   - [Major new feature:](#major-new-feature-2)
-  - [Fix](#fix-3)
+  - [Fix](#fix-4)
 - [0.0.1](#001)
   - [Major new feature:](#major-new-feature-3)
+
+# 0.1.2
+
+## New feature
+
+- Added black formatting
+
+## Fix
+
+- Added a sheild to readme.md
 
 # 0.1.1
 
