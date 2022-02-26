@@ -45,7 +45,7 @@ Of course! Just check contributing.md, complete the checklist and then feel free
 
 ### Windows
 
-Download the latest release of python, at this time 3.10.2, using the exe that you can download [here](https://www.python.org/downloads/), or choclatey using this command 
+Download the latest release of python, at this time 3.10.2, using the exe that you can download [here](https://www.python.org/downloads/), or chocolatey using this command 
 
 ```choco install python``` 
 
@@ -76,7 +76,7 @@ brew install python@3.10 && git clone https://github.com/micziz/SimX && pip3 ins
 
 )
 
-Download the latest release of python, at this time 3.10.2, using the pkg that you can download [here](https://www.python.org/downloads/), or brew/MacPorts using this command 
+Download the latest release of python, at this time 3.10.2, using the pkg that you can download [here](https://www.python.org/downloads/), or Brew/MacPorts using this command 
 
 ```brew install python@3.10```
 ```sudo port install python310``` 
