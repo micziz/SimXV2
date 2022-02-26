@@ -1,22 +1,29 @@
 # Import os to use system commands time to sleep and random to randomize
 import os, time, random
+from pyfiglet import Figlet
+
+fi = Figlet(font="big")
+print(fi.renderText("SimX"))
 
 # Clear command to clear the shell
 clear = "clear"
 # Starting value, can be changed
 value = 100
-
+os.system(clear)
 # Tutorial functions
 def tutorial():
-    # Clear the
+    # Clear the console
     os.system(clear)
+    # Intro
     print("Welcome to a short Interactive tutorial for SimX!")
+    # Sleep
     time.sleep(3)
     print("This tutorial assumes no prior experience")
     time.sleep(3)
     print("Let's go!")
     time.sleep(3)
     os.system(clear)
+    # Actual tutorial
     print(
         "By deafault you are at home. If you ever find yourself lost, use the home command to go home"
     )
@@ -84,12 +91,14 @@ def work():
     fired = True
     print(f"currently at {place}")
     print("Welcome. Heres your options:")
+
     def getnewwork():
         filef = "src/works.txt"
         word = open(filef, "rt").read().splitlines()
         job = random.choice(word)
         print(f"Your new job is: {job}")
         fired = False
+
     print("1 = Work")
     print("2-Fire yourself")
     selectwork = input()
@@ -106,7 +115,7 @@ def work():
             value = value + salary
     elif selectwork == "2":
         print("You fired yourself from your job")
-    time.sleep(5)
+    time.sleep(3)
     home()
 
 
@@ -152,7 +161,7 @@ def buy():
         value = value - subitem2time
 
     getoutmoney()
-    time.sleep(3)
+    time.sleep(2)
     home()
 
 
@@ -161,6 +170,7 @@ def sell():
     value = subitem1time + value
     value = subitem2time + value
     print("Sold everything...")
+    time.sleep(2)
 
 
 def home():

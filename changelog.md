@@ -26,11 +26,14 @@
 - Added fire command, witch fires you.
 - You can re go into a job
 - Added tips and tips.txt
+- Added a figlet start
+- Added requirments.txt
 
 ## Fix:
 
 - Fixed some times
 - Fixed som placements
+- Fixed readme.md with new install instructions.
 
 # 0.1.2
 
