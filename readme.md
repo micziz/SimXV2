@@ -12,9 +12,6 @@
   - [WHY?](#why)
   - [Who is SimX developed by?](#who-is-simx-developed-by)
   - [Can i contribute?](#can-i-contribute)
-  - [How do i download simx?](#how-do-i-download-simx)
-  - [Is there a build available?](#is-there-a-build-available)
-  - [So how do i build?](#so-how-do-i-build)
   - [Installation Instructions](#installation-instructions)
     - [Windows](#windows)
     - [MacOS](#macos)
@@ -44,18 +41,6 @@ By me! And also contributors. You can check the list at the end!
 
 Of course! Just check contributing.md, complete the checklist and then feel free to open a PR!
 
-## How do i download simx?
-
-If youre on MacOS youre in luck, since there is a build available. For every other platform you need to build from source.
-
-## Is there a build available?
-
-Yes! For MacOS only thougth.
-
-## So how do i build?
-
-Here are the install instructions
-
 ## Installation Instructions
 
 ### Windows
@@ -81,7 +66,6 @@ And enjoy!
 
 ### MacOS
 
-**Note there is a build! Go to download the latest release!**
 
 (for inpatient peapole, requires brew: 
 
