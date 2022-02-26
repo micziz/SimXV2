@@ -81,18 +81,32 @@ def help():
 
 def work():
     place = "work"
+    fired = True
     print(f"currently at {place}")
     print("Welcome. Heres your options:")
+    def getnewwork():
+        filef = "src/works.txt"
+        word = open(filef, "rt").read().splitlines()
+        job = random.choice(word)
+        print(f"Your new job is: {job}")
+        fired = False
     print("1 = Work")
+    print("2-Fire yourself")
     selectwork = input()
     if selectwork == "1":
-        print("Working...")
-        rng = random.randint(1, 5)
-        time.sleep(rng)
-        print("You got your salary, witch is 100$ dollars.")
-        global value
-        salary = 100
-        value = value + salary
+        if fired == True:
+            getnewwork()
+        else:
+            print("Working...")
+            rng = random.randint(1, 5)
+            time.sleep(rng)
+            print("You got your salary, witch is 100$ dollars.")
+            global value
+            salary = 100
+            value = value + salary
+    elif selectwork == "2":
+        print("You fired yourself from your job")
+    time.sleep(5)
     home()
 
 
@@ -154,7 +168,7 @@ def home():
     place = "home"
     tips = ["Remember, help can be obtained with the help command"]
     while True:
-        selecthome = input(f"\nCurrently at {place}.")
+        selecthome = input(f"\nCurrently at {place}: ")
         if selecthome == "work":
             work()
         elif selecthome == "help":
