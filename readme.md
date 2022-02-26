@@ -58,6 +58,7 @@ Then, download the latest zip, by going to releases, latest, zip and downloading
 Then, go into the directory where you downloaded, then do:
 
 ```
+pip install -r requirements.txt
 cd src
 python main.py
 ```
@@ -70,7 +71,7 @@ And enjoy!
 (for inpatient peapole, requires brew: 
 
 ```
-brew install python@3.10 && git clone https://github.com/micziz/SimX && cd src && python3 main.py
+brew install python@3.10 && git clone https://github.com/micziz/SimX && pip3 install -r requirements.txt && cd src && python3 main.py
 ```
 
 )
@@ -89,7 +90,7 @@ Then, download the latest zip, by going to releases, latest, zip and downloading
 Then, go into the directory where you downloaded, then do:
 
 ```
-cd src && python3 main.py
+pip3 install -r requirements.txt && cd src && python3 main.py
 ```
 
 And enjoy!
@@ -128,14 +129,14 @@ Then, download the latest zip, by going to releases, latest, zip and downloading
 Then, go into the directory where you downloaded, then do:
 
 ```
-cd src && python main.py
+pip install -r requirements.txt && cd src && python main.py
 ```
 
 or if not working:
 
 
 ```
-cd src && python3 main.py
+pip3 install -r requirements.txt && cd src && python3 main.py
 ```
 
 And enjoy!
