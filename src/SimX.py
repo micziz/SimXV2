@@ -1,7 +1,13 @@
 # Import os to use system commands time to sleep and random to randomize
 import os, time, random
 from pyfiglet import Figlet
-
+version = "0.2.1"
+copyrigth = "Copyrigth© micziz 2022-present"
+credits = {
+    "micziz",
+}
+clear = "clear"
+os.system(clear)
 fi = Figlet(font="big")
 print(fi.renderText("SimX"))
 
@@ -9,7 +15,6 @@ print(fi.renderText("SimX"))
 clear = "clear"
 # Starting value, can be changed
 value = 100
-os.system(clear)
 # Tutorial functions
 def tutorial():
     # Clear the console
@@ -88,7 +93,7 @@ def help():
 
 def work():
     place = "work"
-    fired = True
+    fired = False
     print(f"currently at {place}")
     print("Welcome. Heres your options:")
 
@@ -176,7 +181,11 @@ def sell():
 def home():
     os.system(clear)
     place = "home"
-    tips = ["Remember, help can be obtained with the help command"]
+    tipr = open("src/tips.txt", "rt")
+    tips = tipr.readlines()
+    tip = random.choice(tips)
+    print(tip)
+
     while True:
         selecthome = input(f"\nCurrently at {place}: ")
         if selecthome == "work":
@@ -189,6 +198,14 @@ def home():
             buy()
         elif selecthome == "sell":
             sell()
+        elif selecthome == "version":
+            print(version)
+        elif selecthome == "credits":
+            for credit in credits:
+                print(credit)
+        elif selecthome == "copyrigth":
+            print(copyrigth)
+
 
 
 start()
