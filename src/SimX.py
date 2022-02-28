@@ -1,6 +1,7 @@
 # Import os to use system commands time to sleep and random to randomize
 import os, time, random
 from pyfiglet import Figlet
+
 version = "0.2.1"
 copyrigth = "Copyrigth© micziz 2022-present"
 credits = {
@@ -205,7 +206,6 @@ def home():
                 print(credit)
         elif selecthome == "copyrigth":
             print(copyrigth)
-
 
 
 start()
