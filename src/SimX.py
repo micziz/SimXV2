@@ -1,54 +1,82 @@
-# Import os to use system commands time to sleep and random to randomize
-import os, time, random
-from pyfiglet import Figlet
+# SimX
+#
+#
+# Purpose: Little Simulation Game in Python
+#
+# License: GNU GPL v2
+#
+#
+# Author: micziz and all contributors.
 
-version = "0.2.1"
+
+# Import Standard Modules
+import os, time, random, sys
+
+# Import non standard modules
+import pyfiglet
+
+# Version number.
+version = "0.1.0"
+# Copyright.
 copyrigth = "Copyrigth© micziz 2022-present"
+# Credits
 credits = {
     "micziz",
 }
+# Clear commands
 clear = "clear"
-os.system(clear)
-fi = Figlet(font="big")
-print(fi.renderText("SimX"))
 
-# Clear command to clear the shell
-clear = "clear"
+################################################################START################################################################
+# Clear the console
+os.system(clear)
+# Stamp a figlet title.
+fi = pyfiglet.Figlet(font="big")
+print(fi.renderText("SimX"))
 # Starting value, can be changed
 value = 100
-# Tutorial functions
+# Tutorial function
+def start():
+    print("Welcome to SimX!")
+    print("Locating save...")
+    global name
+    try:
+        f = open("src/name.txt", "rt")
+    except FileNotFoundError:
+        print("Save not found")
+        name = input("Whats your name?: ")
+        f = open("src/name.txt", "wt")
+        f.write(name)
+        print("Sending you to the tutorial")
+        tutorial()
+    save = f.readlines()
+    for name in save:
+        print(f"Welcome {name}!")
+    print(f"Sending you to home")
+
+
 def tutorial():
     # Clear the console
     os.system(clear)
     # Intro
-    print("Welcome to a short Interactive tutorial for SimX!")
+    print("Welcome to a short tutorial for SimX!")
     # Sleep
-    time.sleep(3)
-    print("This tutorial assumes no prior experience")
-    time.sleep(3)
-    print("Let's go!")
-    time.sleep(3)
-    os.system(clear)
+    time.sleep(2)
     # Actual tutorial
     print(
-        "By deafault you are at home. If you ever find yourself lost, use the home command to go home"
+        "Home is your center of operation. If you ever find yourself lost, use the home command to go home"
     )
-    time.sleep(3)
-    os.system(clear)
+    time.sleep(2)
     print(
         "To get yourself some things you gotta work kid! Use work to open the work menu"
     )
-    time.sleep(3)
-    os.system(clear)
+    time.sleep(2)
     print("Use the bank command to open the bank menu!")
-    time.sleep(3)
-    os.system(clear)
+    time.sleep(2)
     print(
-        "If you ever find yourself stuck, use the help command to re do this interactive tutorial, or to get a list of all commands."
+        "If you ever find yourself stuck, use the help command to redo this tutorial, or to get a list of all commands."
     )
-    time.sleep(3)
+    time.sleep(2)
     print("This is everything! Sending you home!")
-
     home()
 
 
@@ -63,21 +91,6 @@ def commands():
     }
     for command in commands:
         print(command)
-
-
-def start():
-    print("Welcome to SimX!")
-    name = input("What's your name? ")
-    print(f"Welcome {name}!")
-    time.sleep(2)
-    print("Ever played?")
-    checkifplayed = input()
-    if checkifplayed == "y":
-        print("Ok, creating a new game")
-    else:
-        tutorial()
-    print("Teleporting you to home!")
-    home()
 
 
 def help():
