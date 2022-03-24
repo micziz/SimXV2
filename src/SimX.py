@@ -52,6 +52,7 @@ def start():
     for name in save:
         print(f"Welcome {name}!")
     print(f"Sending you to home")
+    home()
 
 
 def tutorial():
@@ -83,7 +84,7 @@ def tutorial():
     print("This is everything! Sending you home!")
     home()
 
-
+# Commands section
 def commands():
     print("Attension theshe are section commands. There are help sections in those sections.")
     commands = {
@@ -94,13 +95,17 @@ def commands():
         "Buy: Opens the buy section",
         "Sell: Opens the sell section",
     }
+    for command in commands:
+        print(command)
+    print("Here are some global commands:")
     globalcommands = {
         "Clear: Clear all the console",
         "Copyright: Tells you copyright",
         "Credits: Credits of the game", 
     }
-    for command in commands:
-        print(command)
+    for globalcommand in globalcommands:
+        print(globalcommand)
+    
 
 
 def help():
@@ -120,59 +125,60 @@ def help():
 def work():
     place = "work"
     fired = False
-    print(f"currently at {place}")
-    print("Welcome. Heres your options:")
-
-    def getnewwork():
-        filef = "src/works.txt"
-        word = open(filef, "rt").read().splitlines()
-        job = random.choice(word)
-        print(f"Your new job is: {job}")
-        fired = False
-
-    print("1 = Work")
-    print("2-Fire yourself")
-    selectwork = input()
-    if selectwork == "1":
-        if fired == True:
-            getnewwork()
-        else:
-            print("Working...")
-            rng = random.randint(1, 5)
-            time.sleep(rng)
-            print("You got your salary, witch is 100$ dollars.")
-            global value
-            salary = 100
-            value = value + salary
-    elif selectwork == "2":
-        print("You fired yourself from your job")
-    time.sleep(3)
-    home()
+    while True:
+        print(f"currently at {place}")
+        print("Welcome. Heres your options:")
+        def getnewwork():
+            filef = "src/works.txt"
+            word = open(filef, "rt").read().splitlines()
+            job = random.choice(word)
+            print(f"Your new job is: {job}")
+            fired = False
+        print("1 = Work")
+        print("2-Fire yourself")
+        selectwork = input()
+        if selectwork == "1":
+            if fired == True:
+                getnewwork()
+            else:
+                print("Working...")
+                rng = random.randint(1, 5)
+                time.sleep(rng)
+                salary = 100
+                salarys = str(salary)
+                print(f"You got your salary, witch is {salarys}$ dollars.")
+                global value
+                value = value + salary
+        elif selectwork == "2":
+            print("You fired yourself from your job")
+        elif selectwork == "home":
+            home()
 
 
 def bank():
     place = "bank"
-    print(f"currently at {place}")
-    print("Welcome to bank.")
-    print("Here are your options:")
-    print("1 = value")
-    print("2 = Donate 5 dollars to charity")
-    print("3 = Wipe")
-    selectbank = input()
-    if selectbank == "1":
-        global value
-        print("Value in $:")
-        print(value)
-        time.sleep(3)
-    elif selectbank == "2":
-        print("Thanks")
-        value = value - 5
-        print(value)
-    elif selectbank == "3":
-        value = value % 2
-        print("Half of your bank was snapped out of existance")
-    time.sleep(2)
-    home()
+    while True:
+        print(f"currently at {place}")
+        print("Welcome to bank.")
+        print("Here are your options:")
+        print("1 = value")
+        print("2 = Donate 5 dollars to charity")
+        print("3 = Wipe")
+        selectbank = input()
+        if selectbank == "1":
+            global value
+            print("Value in $:")
+            print(value)
+            time.sleep(3)
+        elif selectbank == "2":
+            print("Thanks")
+            value = value - 5
+            print(value)
+        elif selectbank == "3":
+            value = value % 2
+            print("Half of your bank was snapped out of existance")
+        elif selectbank == "home":
+            home()
 
 
 def buy():
@@ -209,11 +215,11 @@ def home():
     place = "home"
     tipr = open("src/tips.txt", "rt")
     tips = tipr.readlines()
-    tip = random.choice(tips)
-    print(tip)
 
     while True:
-        selecthome = input(f"\nCurrently at {place}: ")
+        tip = random.choice(tips)
+        print(tip)
+        selecthome = input(f"Currently at {place}: ")
         if selecthome == "work":
             work()
         elif selecthome == "help":
@@ -231,6 +237,8 @@ def home():
                 print(credit)
         elif selecthome == "copyrigth":
             print(copyrigth)
+        elif selecthome == "clear":
+            os.system(clear)
 
 
 start()
