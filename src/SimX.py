@@ -38,22 +38,37 @@ value = 100
 def start():
     #Welcome the player
     print("Welcome to SimX!")
-    # Try to laod the save
+    # Try to load the save
     print("Locating save...")
+    # Decleare the golbal var
     global name
-    try:
-        f = open("src/name.txt", "rt")
-    except FileNotFoundError:
-        print("Save not found")
-        name = input("Whats your name?: ")
-        f = open("src/name.txt", "wt")
-        f.write(name)
-        print("Sending you to the tutorial")
-        tutorial()
-    save = f.readlines()
-    for name in save:
-        print(f"Welcome {name}!")
-    print(f"Sending you to home")
+    def loadsave():
+        # Using try except
+        try:
+            # Try to open the file in read mode
+            f = open("src/name.txt", "rt")
+        #If it runs into an exception:
+        except FileNotFoundError:
+            #Create the save
+            print("Save not found")
+            #Ask for name
+            name = input("Whats your name?: ")
+            #Save the name
+            f = open("src/name.txt", "wt")
+            f.write(name)
+            #Will send you to tutorial
+            print("Sending you to the tutorial")
+            tutorial()
+        #Read the lines
+        save = f.readlines()
+        #Print the name
+        for name in save:
+            print(f"Welcome {name}!")
+        #And it sends you to the home.
+        print(f"Sending you to home")
+    #Run the function to loadsave
+    loadsave()
+    #Go home.
     home()
 
 
@@ -88,7 +103,9 @@ def tutorial():
 
 # Commands section
 def commands():
+    #Print that these are section commands
     print("Attension theshe are section commands. There are help sections in those sections.")
+    #Actual commands
     commands = {
         "Help: Opens the help section.",
         "Home: Brings you home",
@@ -97,31 +114,40 @@ def commands():
         "Buy: Opens the buy section",
         "Sell: Opens the sell section",
     }
+    #Print the commands
     for command in commands:
         print(command)
+    #Print that these are global commands
     print("Here are some global commands:")
+    #Actual Commands
     globalcommands = {
         "Clear: Clear all the console",
         "Copyright: Tells you copyright",
         "Credits: Credits of the game", 
     }
+    #Print them
     for globalcommand in globalcommands:
         print(globalcommand)
     
 
-
+#Help section
 def help():
+    #Welcome to the help section
     print("Welcome to the help section!")
+    #Purpose of the help section
     print(
         "Here you can re do the tutorial using the tutorial command, or get a list of commands using commands"
     )
-    selecthelp = input()
-    if selecthelp == "tutorial":
-        tutorial()
-    elif selecthelp == "commands":
-        commands()
-    else: 
-        print("Not a command")
+    while True:
+        selecthelp = input()
+        if selecthelp == "tutorial":
+            tutorial()
+        elif selecthelp == "commands":
+            commands()
+        elif selecthelp == "home":
+            home()
+        else: 
+            print("Not a command")
 
 
 def work():
