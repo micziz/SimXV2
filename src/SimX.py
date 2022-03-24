@@ -62,16 +62,20 @@ def tutorial():
     # Sleep
     time.sleep(2)
     # Actual tutorial
+    # Home
     print(
         "Home is your center of operation. If you ever find yourself lost, use the home command to go home"
     )
     time.sleep(2)
+    # Work
     print(
         "To get yourself some things you gotta work kid! Use work to open the work menu"
     )
     time.sleep(2)
+    # Bank
     print("Use the bank command to open the bank menu!")
     time.sleep(2)
+    # help
     print(
         "If you ever find yourself stuck, use the help command to redo this tutorial, or to get a list of all commands."
     )
@@ -81,13 +85,19 @@ def tutorial():
 
 
 def commands():
+    print("Attension theshe are section commands. There are help sections in those sections.")
     commands = {
         "Help: Opens the help section.",
-        "Tutorial: Opens the tutorial section",
-        "Commands: Opens this section, the commands section",
-        "Copyright: Tells you copyright",
-        "Credits: Credits of the game",
         "Home: Brings you home",
+        "Work: Opens the work section",
+        "Bank: Opens the bank section",
+        "Buy: Opens the buy section",
+        "Sell: Opens the sell section",
+    }
+    globalcommands = {
+        "Clear: Clear all the console",
+        "Copyright: Tells you copyright",
+        "Credits: Credits of the game", 
     }
     for command in commands:
         print(command)
@@ -101,8 +111,10 @@ def help():
     selecthelp = input()
     if selecthelp == "tutorial":
         tutorial()
-    else:
+    elif selecthelp == "commands":
         commands()
+    else: 
+        print("Not a command")
 
 
 def work():
