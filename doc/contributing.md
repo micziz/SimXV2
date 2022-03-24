@@ -4,7 +4,6 @@
   - [Contributing](#contributing-1)
   - [Going trough the repo](#going-trough-the-repo)
     - [Don't know what to do?](#dont-know-what-to-do)
-  - [What to do](#what-to-do)
 
 ## Contributing
 
@@ -30,13 +29,3 @@ There are two folders.
 ### Don't know what to do?
 
 Help people with issues and comment on PR's.
-
-## What to do
-
-I do not provide contributing templates. This is to give the max freedom to the user. But! You must follow a checklist before contributing!
-
-[x] My code is readable.
-[x] I have formatted with black formatting
-[x] I have updated the contributors list
-[x] I have made required changes to docs.
-
