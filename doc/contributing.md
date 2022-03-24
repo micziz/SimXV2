@@ -35,8 +35,8 @@ Help people with issues and comment on PR's.
 
 I do not provide contributing templates. This is to give the max freedom to the user. But! You must follow a checklist before contributing!
 
-[] My code is readable.
-[] I have formatted with black formatting
-[] I have updated the contributors list
-[] I have made required changes to docs.
+[x] My code is readable.
+[x] I have formatted with black formatting
+[x] I have updated the contributors list
+[x] I have made required changes to docs.
 
