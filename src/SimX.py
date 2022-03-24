@@ -6,7 +6,7 @@
 # License: GNU GPL v2
 #
 #
-# Author: micziz and all contributors.
+# Author: micziz
 
 
 # Import Standard Modules
@@ -41,7 +41,7 @@ def start():
     print("Welcome to SimX!")
     # Try to load the save
     print("Locating save...")
-    # Decleare the golbal var
+    # Decleare the golbal variable
     global name
     def loadsave():
         # Using try except
@@ -193,21 +193,21 @@ def work():
 
 def bank():
     place = "bank"
+    print(f"currently at {place}")
+    print("Welcome to bank.")
+    print("Here are your options:")
+    print("1 = value")
+    print("2 = Donate 5 dollars to charity")
+    print("3 = Wipe")
     while True:
-        print(f"currently at {place}")
-        print("Welcome to bank.")
-        print("Here are your options:")
-        print("1 = value")
-        print("2 = Donate 5 dollars to charity")
-        print("3 = Wipe")
-        selectbank = input()
+        selectbank = input("Type helpt if you feel stuck")
         if selectbank == "1":
             global value
             print("Value in $:")
             print(value)
             time.sleep(3)
         elif selectbank == "2":
-            print("Thanks")
+            print("Thanks For donating!")
             value = value - 5
             print(value)
         elif selectbank == "3":
@@ -215,6 +215,12 @@ def bank():
             print("Half of your bank was snapped out of existance")
         elif selectbank == "home":
             home()
+        elif selectbank == "help":
+            print("1 = value")
+            print("2 = Donate 5 dollars to charity")
+            print("3 = Wipe")    
+        else:
+            print("Not a command!!!")
 
 
 def buy():
@@ -245,7 +251,7 @@ def sell():
     print("Sold everything...")
     time.sleep(2)
 
-
+#Home function
 def home():
     os.system(clear)
     place = "home"
@@ -280,6 +286,8 @@ def home():
             os.system(clear)
         elif selecthome == "author":
             print(author)
+        else:
+            print("Not a command!")
 
 
 start()
