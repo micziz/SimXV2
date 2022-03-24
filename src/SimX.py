@@ -21,8 +21,9 @@ version = "0.1.0"
 copyrigth = "Copyrigth© micziz 2022-present"
 # Credits
 credits = {
-    "micziz",
+    "micziz (miczicontent@gmail.com)",
 }
+author = "micziz (miczicontent@gmail.com)"
 # Clear commands
 clear = "clear"
 
@@ -266,14 +267,19 @@ def home():
         elif selecthome == "sell":
             sell()
         elif selecthome == "version":
-            print(version)
+            print(f"Current SimXV2 version: {version}. SimX Follows semantic versioning!")
         elif selecthome == "credits":
+            print("OG Author:")
+            print(author)
+            print("Contributors:")
             for credit in credits:
                 print(credit)
         elif selecthome == "copyrigth":
             print(copyrigth)
         elif selecthome == "clear":
             os.system(clear)
+        elif selecthome == "author":
+            print(author)
 
 
 start()
