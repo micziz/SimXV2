@@ -6,7 +6,7 @@
 # License: GNU GPL v2
 #
 #
-# Author: micziz and all contributors.
+# Author: micziz
 
 
 # Import Standard Modules
@@ -21,8 +21,9 @@ version = "0.1.0"
 copyrigth = "Copyrigth© micziz 2022-present"
 # Credits
 credits = {
-    "micziz",
+    "micziz (miczicontent@gmail.com)",
 }
+author = "micziz (miczicontent@gmail.com)"
 # Clear commands
 clear = "clear"
 
@@ -40,7 +41,7 @@ def start():
     print("Welcome to SimX!")
     # Try to load the save
     print("Locating save...")
-    # Decleare the golbal var
+    # Decleare the golbal variable
     global name
     def loadsave():
         # Using try except
@@ -138,15 +139,22 @@ def help():
     print(
         "Here you can re do the tutorial using the tutorial command, or get a list of commands using commands"
     )
+    #While True loop for the help section
     while True:
-        selecthelp = input()
+        #input
+        selecthelp = input("Use help to get help!")
+        #Check for commnads
         if selecthelp == "tutorial":
+            #Tutorial function call
             tutorial()
         elif selecthelp == "commands":
+            #Commands call
             commands()
         elif selecthelp == "home":
+            #Home function call
             home()
         else: 
+            #Fallout command
             print("Not a command")
 
 
@@ -185,21 +193,21 @@ def work():
 
 def bank():
     place = "bank"
+    print(f"currently at {place}")
+    print("Welcome to bank.")
+    print("Here are your options:")
+    print("1 = value")
+    print("2 = Donate 5 dollars to charity")
+    print("3 = Wipe")
     while True:
-        print(f"currently at {place}")
-        print("Welcome to bank.")
-        print("Here are your options:")
-        print("1 = value")
-        print("2 = Donate 5 dollars to charity")
-        print("3 = Wipe")
-        selectbank = input()
+        selectbank = input("Type helpt if you feel stuck")
         if selectbank == "1":
             global value
             print("Value in $:")
             print(value)
             time.sleep(3)
         elif selectbank == "2":
-            print("Thanks")
+            print("Thanks For donating!")
             value = value - 5
             print(value)
         elif selectbank == "3":
@@ -207,6 +215,12 @@ def bank():
             print("Half of your bank was snapped out of existance")
         elif selectbank == "home":
             home()
+        elif selectbank == "help":
+            print("1 = value")
+            print("2 = Donate 5 dollars to charity")
+            print("3 = Wipe")    
+        else:
+            print("Not a command!!!")
 
 
 def buy():
@@ -237,7 +251,7 @@ def sell():
     print("Sold everything...")
     time.sleep(2)
 
-
+#Home function
 def home():
     os.system(clear)
     place = "home"
@@ -259,14 +273,21 @@ def home():
         elif selecthome == "sell":
             sell()
         elif selecthome == "version":
-            print(version)
+            print(f"Current SimXV2 version: {version}. SimX Follows semantic versioning!")
         elif selecthome == "credits":
+            print("OG Author:")
+            print(author)
+            print("Contributors:")
             for credit in credits:
                 print(credit)
         elif selecthome == "copyrigth":
             print(copyrigth)
         elif selecthome == "clear":
             os.system(clear)
+        elif selecthome == "author":
+            print(author)
+        else:
+            print("Not a command!")
 
 
 start()
