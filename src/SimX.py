@@ -161,17 +161,17 @@ def help():
 def work():
     place = "work"
     fired = False
+    print(f"currently at {place}")
+    print("Welcome. Heres your options:")
+    def getnewwork():
+        filef = "src/works.txt"
+        word = open(filef, "rt").read().splitlines()
+        job = random.choice(word)
+        print(f"Your new job is: {job}")
+        fired = False
+    print("1 = Work")
+    print("2-Fire yourself")
     while True:
-        print(f"currently at {place}")
-        print("Welcome. Heres your options:")
-        def getnewwork():
-            filef = "src/works.txt"
-            word = open(filef, "rt").read().splitlines()
-            job = random.choice(word)
-            print(f"Your new job is: {job}")
-            fired = False
-        print("1 = Work")
-        print("2-Fire yourself")
         selectwork = input()
         if selectwork == "1":
             if fired == True:
