@@ -34,9 +34,11 @@ fi = pyfiglet.Figlet(font="big")
 print(fi.renderText("SimX"))
 # Starting value, can be changed
 value = 100
-# Tutorial function
+# Start function
 def start():
+    #Welcome the player
     print("Welcome to SimX!")
+    # Try to laod the save
     print("Locating save...")
     global name
     try:
