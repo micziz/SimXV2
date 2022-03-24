@@ -138,15 +138,22 @@ def help():
     print(
         "Here you can re do the tutorial using the tutorial command, or get a list of commands using commands"
     )
+    #While True loop for the help section
     while True:
-        selecthelp = input()
+        #input
+        selecthelp = input("Use help to get help!")
+        #Check for commnads
         if selecthelp == "tutorial":
+            #Tutorial function call
             tutorial()
         elif selecthelp == "commands":
+            #Commands call
             commands()
         elif selecthelp == "home":
+            #Home function call
             home()
         else: 
+            #Fallout command
             print("Not a command")
 
 

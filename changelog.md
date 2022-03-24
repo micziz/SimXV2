@@ -10,4 +10,4 @@
 - Inventory!
 - Save System
 - Added more tips!
-- 
+- All sections have a fallout command that will print not a valid command
