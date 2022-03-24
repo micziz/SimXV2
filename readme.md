@@ -1,3 +1,9 @@
+# Deprecation!
+
+SimX Is being deprecated. For SimXV2. It's a complete rerwite and betterance of SimX! You can find it here. SimXV1 Will be supported but not updated. **DO NOT OPEN ISSUES AND PR'S HERE, OPEN THEM ON SIMXV2!!!!!**
+
+SimXV2: https://github.com/micziz/SimXV2
+
 # SimX!
 
 ---
