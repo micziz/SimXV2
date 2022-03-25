@@ -253,12 +253,19 @@ def sell():
     print("Sold everything...")
     time.sleep(2)
 
+#Buy function
 def buy():
-    global item1time, item2time
+    #Decleare some global variables
+    global item1time
+    #Open the things to buy file
     fttb = open("src/files/ttb.txt", "rt")
+    #Gee items
     item = fttb.readlines()
+    #Decleare a List
     items = []
+    #append
     items.append(item)
+    #Get and decleare items.
     item1 = random.choice(items)
     item1time = random.randint(1, 5)
     time.sleep(2)
@@ -273,7 +280,6 @@ def buy():
     print(f"You bought {item1} x" + str(item1time))
     time.sleep(2)
     home()
-
 
 #Home function
 def home():
