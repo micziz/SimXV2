@@ -11,3 +11,5 @@
 - Save System
 - Added more tips!
 - All sections have a fallout command that will print not a valid command
+- Changed the files in the files directory
+- Added ttb (things to buy)

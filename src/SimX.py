@@ -157,7 +157,7 @@ def help():
             #Fallout command
             print("Not a command")
 
-
+#Work function
 def work():
     place = "work"
     fired = False
@@ -223,23 +223,29 @@ def bank():
             print("Not a command!!!")
 
 
+def addInventory(i1, it1):
+    inventory = []
+    inventorytime = []
+    inventory.append(i1)
+    inventorytime.append(it1)
+
 def buy():
     global item1time, item2time
-    items = ["Strawberry", "Cheese", "Vinager", "Chips", "Milk", "Ham", "Turkey"]
+    fttb = open("src/files/ttb.txt", "rt")
+    item = fttb.readlines()
+    items = []
+    items.append(item)
     item1 = random.choice(items)
-    item2 = random.choice(items)
     item1time = random.randint(1, 5)
-    item2time = random.randint(1, 5)
-    print(f"You bougth {item1} x" + str(item1time) + f" and {item2} x" + str(item2time))
-
+    time.sleep(2)
     def getoutmoney():
-        global subitem1time, subitem2time, value
+        global subitem1time, value
         subitem1time = item1time * 10
         value = value - subitem1time
-        subitem2time = item2time * 10
-        value = value - subitem2time
-
     getoutmoney()
+    addInventory(item1, item1time)
+    os.system(clear)
+    print(f"You bougth {item1} x" + str(item1time))
     time.sleep(2)
     home()
 
@@ -255,7 +261,7 @@ def sell():
 def home():
     os.system(clear)
     place = "home"
-    tipr = open("src/tips.txt", "rt")
+    tipr = open("src/files/tips.txt", "rt")
     tips = tipr.readlines()
 
     while True:
