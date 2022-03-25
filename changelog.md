@@ -13,3 +13,6 @@
 - All sections have a fallout command that will print not a valid command
 - Changed the files in the files directory
 - Added ttb (things to buy)
+- Added info command
+- Added license command
+- Changed license to GNU GPL 2.0
