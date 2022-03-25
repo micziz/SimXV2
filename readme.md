@@ -36,7 +36,7 @@ Of course! Just check [contributing.md](doc/contributing.md), complete the check
 
 ## Compatibility.
 
-The app was developed in python 3.10.2, the latest at this time. The app is compatible with all versions of python after 3.6, because of f strings. Better with 3.9.8 and above.
+The app was developed in python 3.10.2 and tested on 3.10.4, the latest at this time. The app is compatible with all versions of python after 3.6, because of f strings. Tested with 3.9.8 and above.
 
 ### Why?
 
