@@ -26,6 +26,15 @@ credits = {
 author = "micziz (miczicontent@gmail.com)"
 # Clear commands
 clear = "clear"
+# License command
+license = "SimX is licensed under the GNU GPL 2.0"
+# Info command
+info = f"""
+SimX V {version}. 
+This program is free softwere. Source code is available at https://www.github.com/micziz/SimXV2
+Liscenced under the GNU GPL 2.0
+Copyright© micziz 2022-present
+"""
 
 ################################################################START################################################################
 # Clear the console
@@ -333,6 +342,10 @@ def home():
             os.system(clear)
         elif selecthome == "author":
             print(author)
+        elif selecthome == "license":
+            print(license)
+        elif selecthome == "info":
+            print(info)
         else:
             print("Not a command!")
 
