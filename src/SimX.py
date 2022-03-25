@@ -18,7 +18,7 @@ import pyfiglet
 # Version number.
 version = "0.1.0"
 # Copyright.
-copyrigth = "Copyrigth© micziz 2022-present"
+copyright = "Copyright© micziz 2022-present"
 # Credits
 credits = {
     "micziz (miczicontent@gmail.com)",
@@ -41,7 +41,7 @@ def start():
     print("Welcome to SimX!")
     # Try to load the save
     print("Locating save...")
-    # Decleare the golbal variable
+    # Declare the global variable's
     global name
     def loadsave():
         # Using try except
@@ -143,7 +143,7 @@ def help():
     while True:
         #input
         selecthelp = input("Use help to get help!")
-        #Check for commnads
+        #Check for input
         if selecthelp == "tutorial":
             #Tutorial function call
             tutorial()
@@ -159,36 +159,51 @@ def help():
 
 #Work function
 def work():
+    #Declare that the place is work
     place = "work"
+    #Declare that you are not fired
     fired = False
+    #Print where you are
     print(f"currently at {place}")
+    #Welcome to the place
     print("Welcome. Heres your options:")
-    def getnewwork():
-        filef = "src/works.txt"
-        word = open(filef, "rt").read().splitlines()
-        job = random.choice(word)
+    #Function to get a new job
+    def getNewJob():
+        #Open the file for jobs
+        filef = "src/files/jobs.txt"
+        #Read it
+        jobs = open(filef, "rt").read().splitlines()
+        #Random.choice to select it
+        job = random.choice(jobs)
+        #Announce the new job
         print(f"Your new job is: {job}")
+        #No longer fired
         fired = False
     print("1 = Work")
     print("2-Fire yourself")
     while True:
-        selectwork = input()
+        selectwork = input("Need Help? Type help.")
         if selectwork == "1":
             if fired == True:
-                getnewwork()
+                getNewJob()
             else:
                 print("Working...")
                 rng = random.randint(1, 5)
                 time.sleep(rng)
                 salary = 100
                 salarys = str(salary)
-                print(f"You got your salary, witch is {salarys}$ dollars.")
+                print(f"You got your salary, witch is {salary}$ dollars.")
                 global value
                 value = value + salary
         elif selectwork == "2":
             print("You fired yourself from your job")
+        elif selectwork == "help":
+            print("1 = Work")
+            print("2-Fire yourself")
         elif selectwork == "home":
             home()
+        else:
+            print("Not a command!")
 
 
 def bank():
@@ -200,7 +215,7 @@ def bank():
     print("2 = Donate 5 dollars to charity")
     print("3 = Wipe")
     while True:
-        selectbank = input("Type helpt if you feel stuck")
+        selectbank = input("Type help if you feel stuck")
         if selectbank == "1":
             global value
             print("Value in $:")
@@ -212,7 +227,7 @@ def bank():
             print(value)
         elif selectbank == "3":
             value = value % 2
-            print("Half of your bank was snapped out of existance")
+            print("Half of your bank was snapped out of existence")
         elif selectbank == "home":
             home()
         elif selectbank == "help":
@@ -245,7 +260,7 @@ def buy():
     getoutmoney()
     addInventory(item1, item1time)
     os.system(clear)
-    print(f"You bougth {item1} x" + str(item1time))
+    print(f"You bought {item1} x" + str(item1time))
     time.sleep(2)
     home()
 
@@ -286,8 +301,8 @@ def home():
             print("Contributors:")
             for credit in credits:
                 print(credit)
-        elif selecthome == "copyrigth":
-            print(copyrigth)
+        elif selecthome == "copyright":
+            print(copyright)
         elif selecthome == "clear":
             os.system(clear)
         elif selecthome == "author":
