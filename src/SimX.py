@@ -71,6 +71,7 @@ def start():
 
     # Run the function to loadsave
     loadsave()
+    time.sleep(2)
     # Go home.
     home()
 
