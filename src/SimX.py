@@ -268,7 +268,9 @@ def buy():
     #Get and decleare items.
     item1 = random.choice(items)
     item1time = random.randint(1, 5)
+    #sleep
     time.sleep(2)
+    #Remove moeny from the bank account
     def getoutmoney():
         global subitem1time, value
         subitem1time = item1time * 10
