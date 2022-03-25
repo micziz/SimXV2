@@ -237,12 +237,21 @@ def bank():
         else:
             print("Not a command!!!")
 
-
 def addInventory(i1, it1):
     inventory = []
     inventorytime = []
     inventory.append(i1)
     inventorytime.append(it1)
+
+#Sell function
+def sell():
+    #global variables
+    global value, subitem1time
+    #Sell everything
+    value = subitem1time + value
+    #Print it out
+    print("Sold everything...")
+    time.sleep(2)
 
 def buy():
     global item1time, item2time
@@ -260,17 +269,11 @@ def buy():
     getoutmoney()
     addInventory(item1, item1time)
     os.system(clear)
+    item1 = random.choice(item1)
     print(f"You bought {item1} x" + str(item1time))
     time.sleep(2)
     home()
 
-
-def sell():
-    global value, subitem1time, subitem2time
-    value = subitem1time + value
-    value = subitem2time + value
-    print("Sold everything...")
-    time.sleep(2)
 
 #Home function
 def home():
