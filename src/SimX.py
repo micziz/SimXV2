@@ -196,28 +196,48 @@ def work():
         # No longer fired
         fired = False
 
+    #Options
     print("1 = Work")
     print("2-Fire yourself")
+    #while True
     while True:
+        #get input
         selectwork = input("Need Help? Type help.")
+        #if it's equal to 1
         if selectwork == "1":
+            #and you are fired
             if fired == True:
+                #Get a new job
                 getNewJob()
+            #else
             else:
+                #print that you are forking
                 print("Working...")
+                #time to work
                 rng = random.randint(1, 5)
                 time.sleep(rng)
+                #TODO May add diffrent salary
+                #salary
                 salary = 100
+                #Transfor for str
                 salarys = str(salary)
+                #Print that it ended
                 print(f"You got your salary, witch is {salary}$ dollars.")
                 global value
+                #add Value
                 value = value + salary
+        #if it's equal to 2
         elif selectwork == "2":
+            #You are fired
             print("You fired yourself from your job")
+        #if it's equal to help
         elif selectwork == "help":
+            #Reprint help
             print("1 = Work")
             print("2-Fire yourself")
+        #go home command
         elif selectwork == "home":
+            #home
             home()
         else:
             print("Not a command!")
@@ -307,47 +327,71 @@ def buy():
 
 # Home function
 def home():
+    #Clear the console
     os.system(clear)
+    #Decleare that the place is Home
     place = "home"
+    #Open tips.txt
     tipr = open("src/files/tips.txt", "rt")
+    #Read the tips
     tips = tipr.readlines()
-
+    #while True...
     while True:
+        #Select a random tip
         tip = random.choice(tips)
+        #Print it
         print(tip)
+        # Print the current place
         selecthome = input(f"Currently at {place}: ")
+        #Check for comamnds:
         if selecthome == "work":
+            #work
             work()
         elif selecthome == "help":
+            #help
             help()
         elif selecthome == "bank":
+            #bank
             bank()
         elif selecthome == "buy":
+            #buy
             buy()
         elif selecthome == "sell":
+            #Sell
             sell()
         elif selecthome == "version":
+            #version
             print(
                 f"Current SimXV2 version: {version}. SimX Follows semantic versioning!"
             )
         elif selecthome == "credits":
+            #credits
             print("OG Author:")
             print(author)
             print("Contributors:")
             for credit in credits:
                 print(credit)
         elif selecthome == "copyright":
+            #copyright
             print(copyright)
         elif selecthome == "clear":
+            #clear
             os.system(clear)
         elif selecthome == "author":
+            #author
             print(author)
         elif selecthome == "license":
+            #license
             print(license)
         elif selecthome == "info":
+            #info
             print(info)
         else:
+            #else
             print("Not a command!")
+
+#----------------------------------------------------------------Start function----------------------------------------------------------------
+
 
 
 start()
