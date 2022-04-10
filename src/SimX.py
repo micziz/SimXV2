@@ -23,6 +23,7 @@ copyright = "Copyright© micziz 2022-present"
 credits = {
     "micziz (miczicontent@gmail.com)",
 }
+__credits_str = '\n'.join(credits)
 author = "micziz (miczicontent@gmail.com)"
 # License command
 license = "SimX is licensed under the GNU GPL 2.0"
@@ -358,7 +359,7 @@ def home():
             "buy" : buy,
             "sell" : sell,
             "version" : lambda : print(f"Current SimXV2 version: {version}. SimX Follows semantic versioning!"),
-            "credits" : lambda : print(f"OG Author:\n{author}\nContributors:\n{'\n'.join(credits)}"),
+            "credits" : lambda : print(f"OG Author:\n{author}\nContributors:\n{__credits_str}"),
             "copyright" : lambda : print(copyright),
             "clear" : clear_terminal,
             "author" : lambda : print(author),
