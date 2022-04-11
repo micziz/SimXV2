@@ -22,7 +22,7 @@ SimX, witch stands for Simulation eXtreme (i know, not really extreme but it's m
 
 ## Installation
 
-See [install.md](doc/install.md)
+See the install page on the wiki!
 
 ## Faq
 
@@ -32,7 +32,7 @@ By me! And also contributors. You can check the list at the end!
 
 ### Can i contribute?
 
-Of course! Just check [contributing.md](doc/contributing.md), complete the checklist and then feel free to open a PR!
+Of course! Just check teh contributing page on the wiki!
 
 ## Compatibility.
 

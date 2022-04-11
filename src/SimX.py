@@ -195,15 +195,16 @@ def work():
         print(f"Your new job is: {job}")
         # No longer fired
         fired = False
-
+    
     print("1 = Work")
     print("2-Fire yourself")
+
     while True:
         selectwork = input("Need Help? Type help.")
         if selectwork == "1":
             if fired == True:
                 getNewJob()
-            else:
+            elif fired == False:
                 print("Working...")
                 rng = random.randint(1, 5)
                 time.sleep(rng)
@@ -214,6 +215,7 @@ def work():
                 value = value + salary
         elif selectwork == "2":
             print("You fired yourself from your job")
+            getNewJob()
         elif selectwork == "help":
             print("1 = Work")
             print("2-Fire yourself")
