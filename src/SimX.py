@@ -31,7 +31,7 @@ license = "SimX is licensed under the GNU GPL 2.0"
 info = f"""
 SimX V {version}. 
 This program is free softwere. Source code is available at https://www.github.com/micziz/SimXV2
-Liscenced under the GNU GPL 2.0
+Licensed under the GNU GPL 2.0
 Copyright© micziz 2022-present
 """
 
