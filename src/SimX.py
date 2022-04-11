@@ -23,9 +23,8 @@ copyright = "Copyright© micziz 2022-present"
 credits = {
     "micziz (miczicontent@gmail.com)",
 }
+__credits_str = '\n'.join(credits)
 author = "micziz (miczicontent@gmail.com)"
-# Clear commands
-clear = "clear"
 # License command
 license = "SimX is licensed under the GNU GPL 2.0"
 # Info command
@@ -38,7 +37,18 @@ Copyright© micziz 2022-present
 
 ################################################################START################################################################
 # Clear the console
-os.system(clear)
+def clear_terminal() -> None:
+  if sys.stdout.isatty(): # if in a terminal
+    if sys.platform.startswith("win"):
+      # For windows, use cls
+      os.system("cls")
+    else:
+      # For MacOS / Linux, this should clear the terminal
+      sys.stdout.write("\033[2J\033[1;1H")
+  # Do nothing if not a terminal
+  return
+
+clear_terminal()
 # Stamp a figlet title.
 fi = pyfiglet.Figlet(font="big")
 print(fi.renderText("SimX"))
@@ -86,8 +96,7 @@ def start():
 
 
 def tutorial():
-    # Clear the console
-    os.system(clear)
+    clear_terminal()
     # Intro
     print("Welcome to a short tutorial for SimX!")
     # Sleep
@@ -318,7 +327,7 @@ def buy():
 
     getoutmoney()
     addInventory(item1, item1time)
-    os.system(clear)
+    clear_terminal()
     item1 = random.choice(item1)
     print(f"You bought {item1} x" + str(item1time))
     time.sleep(2)
@@ -327,8 +336,7 @@ def buy():
 
 # Home function
 def home():
-    #Clear the console
-    os.system(clear)
+    clear_terminal()
     #Decleare that the place is Home
     place = "home"
     #Open tips.txt
@@ -344,54 +352,29 @@ def home():
         # Print the current place
         selecthome = input(f"Currently at {place}: ")
         #Check for comamnds:
-        if selecthome == "work":
-            #work
-            work()
-        elif selecthome == "help":
-            #help
-            help()
-        elif selecthome == "bank":
-            #bank
-            bank()
-        elif selecthome == "buy":
-            #buy
-            buy()
-        elif selecthome == "sell":
-            #Sell
-            sell()
-        elif selecthome == "version":
-            #version
-            print(
-                f"Current SimXV2 version: {version}. SimX Follows semantic versioning!"
-            )
-        elif selecthome == "credits":
-            #credits
-            print("OG Author:")
-            print(author)
-            print("Contributors:")
-            for credit in credits:
-                print(credit)
-        elif selecthome == "copyright":
-            #copyright
-            print(copyright)
-        elif selecthome == "clear":
-            #clear
-            os.system(clear)
-        elif selecthome == "author":
-            #author
-            print(author)
-        elif selecthome == "license":
-            #license
-            print(license)
-        elif selecthome == "info":
-            #info
-            print(info)
-        else:
-            #else
-            print("Not a command!")
+        options = {
+            "work" : work,
+            "help" : help,
+            "bank" : bank,
+            "buy" : buy,
+            "sell" : sell,
+            "version" : lambda : print(f"Current SimXV2 version: {version}. SimX Follows semantic versioning!"),
+            "credits" : lambda : print(f"OG Author:\n{author}\nContributors:\n{__credits_str}"),
+            "copyright" : lambda : print(copyright),
+            "clear" : clear_terminal,
+            "author" : lambda : print(author),
+            "license" : lambda: print(license),
+            "info" : lambda: print(info),
+        }
+        try:
+            options[selecthome]() # Call function in options based on input
+            # eg. input is clear, clear_terminal() is called
+        except KeyError:
+            print('Unknown command')
+            pass # Invalid input, do nothing
 
 #----------------------------------------------------------------Start function----------------------------------------------------------------
 
 
-
-start()
+if __name__ == "__main__":
+    start()

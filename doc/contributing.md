@@ -1,24 +1,23 @@
 # Contributing
 
-- [Contributing](#contributing)
-  - [Contributing](#contributing-1)
-  - [Going trough the repo](#going-trough-the-repo)
-    - [Don't know what to do?](#dont-know-what-to-do)
+- [Contributing](#contributing-1)
+- [Repository Guide](#repository-guide)
+  - [Don't know what to do?](#dont-know-what-to-do)
 
 ## Contributing
 
-PR's are greatly appreciated! You can open a PR if you want to:
+PRs are greatly appreciated! You can open a PR if you want to:
 
 - Fix a spelling error
 - Fix a bug
 - Fix a minor thing
-- Fix one of these documents
+- Fix documentation (such as this file) issues
 
-If you want to propose a major refactor, or an addition that i did not propose, please open an issue!
+If you want to propose a major refactor, or addition that I did not propose, please open an issue!
 
-## Going trough the repo
+## Repository Guide
 
-In the root of the repository there is a readme.md file, LICENSE and requirements.txt, to install packages.
+In the root of the repository there is a readme.md file, LICENSE, and requirements.txt, to install packages.
 
 There are two folders. 
 
@@ -28,4 +27,4 @@ There are two folders.
 
 ### Don't know what to do?
 
-Help people with issues and comment on PR's.
+Help people with issues and comment on PRs.
